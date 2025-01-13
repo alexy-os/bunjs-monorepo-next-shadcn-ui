@@ -11,9 +11,11 @@
   ],
   "scripts": {
     "dev": "bun run --cwd apps/web dev",
-    "build": "bun run build:packages && bun run build:apps",
+    "build": "bun run build:apps",
+    "start": "bun run start:apps",
     "build:packages": "bun run --cwd packages/ui build",
     "build:apps": "bun run --cwd apps/web build",
+    "start:apps": "bun run --cwd apps/web start",
     "lint": "bun run --cwd apps/web lint",
     "ui:init": "bun x shadcn@latest init --cwd packages/ui",
     "ui:add": "bun x shadcn@latest add --cwd packages/ui",
