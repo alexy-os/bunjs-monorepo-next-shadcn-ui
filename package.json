@@ -1,0 +1,23 @@
+{
+  "name": "bunjs-monorepo-next-shadcn-ui",
+  "description": "Next.js Shadcn/UI Monorepo Starter",
+  "version": "0.0.1",
+  "author": "AlexY-OS",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "bun run --cwd apps/web dev",
+    "build": "bun run build:packages && bun run build:apps",
+    "build:packages": "bun run --cwd packages/ui build",
+    "build:apps": "bun run --cwd apps/web build",
+    "lint": "bun run --cwd apps/web lint",
+    "ui:init": "bun x shadcn@latest init --cwd packages/ui",
+    "ui:add": "bun x shadcn@latest add --cwd packages/ui",
+    "clean": "rm -rf node_modules",
+    "clean:all": "rm -rf node_modules **/node_modules"
+  }
+} 

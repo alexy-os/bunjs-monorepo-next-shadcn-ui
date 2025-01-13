@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "baseUrl": ".",
+    "paths": {
+      "@bun-monorepo/ui": ["packages/ui/src"],
+      "@bun-monorepo/ui/*": ["packages/ui/src/*"],
+      "@bun-monorepo/ui/components/*": ["packages/ui/src/components/*"],
+      "@bun-monorepo/ui/hooks/*": ["packages/ui/src/hooks/*"],
+      "@bun-monorepo/lib/*": ["packages/ui/src/lib/*"],
+      "@bun-monorepo/lib/utils": ["packages/ui/src/lib/utils.ts"],
+      "@web": ["apps/web/src"],
+      "@web/*": ["apps/web/src/*"]
+    }
+  },
+  "exclude": ["node_modules"]
+} 
