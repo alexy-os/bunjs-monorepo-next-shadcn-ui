@@ -32,8 +32,8 @@ mkdir apps/web packages/ui
 ```
 
 2. **Configure Package Files**
+> packages/ui/package.json
 ```json
-// packages/ui/package.json
 {
   "name": "@bun-monorepo/ui",
   "exports": {
@@ -45,8 +45,8 @@ mkdir apps/web packages/ui
 ```
 
 3. **Setup TypeScript Paths**
+> tsconfig.json
 ```json
-// tsconfig.json
 {
   "compilerOptions": {
     "paths": {
@@ -86,8 +86,8 @@ import { Component } from "@web/components";
 ```
 
 ## Scripts
+> package.json
 ```json
-// Root package.json
 {
   "scripts": {
     "dev": "bun run --cwd apps/web dev",
