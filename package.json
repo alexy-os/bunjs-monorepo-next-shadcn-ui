@@ -18,8 +18,12 @@
     "start:apps": "bun run --cwd apps/web start",
     "lint": "bun run --cwd apps/web lint",
     "ui:init": "bun x shadcn@latest init --cwd packages/ui",
-    "ui:add": "bun x shadcn@latest add --cwd packages/ui",
+    "shadcn:add": "bun x shadcn@latest add --cwd packages/ui",
+    "ui:add": "bash scripts/replaceImport/add-components.sh",
     "clean": "rm -rf node_modules",
     "clean:all": "rm -rf node_modules **/node_modules"
+  },
+  "devDependencies": {
+    "glob": "^11.0.1"
   }
-} 
+}
